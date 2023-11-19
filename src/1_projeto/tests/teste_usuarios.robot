@@ -14,10 +14,8 @@ Suite Teardown    Encerrar Sessao
 
 TC01: Teste Crud
 
-    ${ID_USUARIO}    Criacao de Usuario    testes_qa@teste.com    teste
+    ${ID_USUARIO}    Dado Criação de Usuario com email: "testes_qa@teste.com" e senha: "teste"
     Buscar Usuario    ${ID_USUARIO}    200
     Atualizar Usuario    ${ID_USUARIO}
     Buscar Usuario    ${ID_USUARIO}    200
-    Deletar Usuario    ${ID_USUARIO}
-    #Deleta toda a sessao criada
-    Delete All Sessions
+    Então Deletar "${ID_USUARIO}"

@@ -17,7 +17,7 @@ ${SENHA}    teste
 TC01: Realizar autenticacao
 
     ${ID_USUARIO}    Dado Criação de Usuario com email: "${EMAIL}" e senha: "${SENHA}"
-    E Autenticar Usuario com email: "${EMAIL}" e senha: "${SENHA}"
+    Quando Autenticar Usuario com email: "${EMAIL}" e senha: "${SENHA}"
     Então Deletar "${ID_USUARIO}"
 
 # TC02: Verificar erro ao se autenticar
